@@ -1,0 +1,309 @@
+:root {
+    --verde-principal: #2C6B2F;
+    --azul-secundario: #2E4A7B;
+    --laranja-destaque: #F57F2B;
+    --cinza-fundo: #F4F4F4;
+    --cinza-texto-principal: #333333;
+    --cinza-texto-secundario: #666666;
+    --verde-floresta: #2e8b57;
+    --azul-urbano: #4682b4;
+    --cinza-claro: #f9f9f9;
+    --cinza-medio: #ddd;
+    --cinza-escuro: #333;
+}
+
+/* Reset básico para remoção de margens e preenchimento padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--cinza-texto-principal);
+    background-color: var(--cinza-fundo);
+    transition: background-color 0.3s ease;
+}
+
+/* Cabeçalho e navegação */
+header {
+    background: var(--verde-principal);
+    color: var(--cinza-texto-principal);
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo img {
+    height: 50px; 
+    width: auto; 
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+}
+
+nav a:hover {
+    background: #575757;
+}
+
+/* Seção Hero */
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url(https://ensinarhoje.com/wp-content/uploads/2020/01/Municipio-campo-e-cidade.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+
+/* Ajustar o conteúdo para ficar acima do overlay */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Títulos e textos da seção Hero */
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out 0.5s;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--laranja-destaque);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #e65c00;
+    transform: scale(1.05);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Seções */
+section {
+    padding: 60px 20px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: var(--verde-floresta);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Seção Sobre */
+#sobre {
+    background-color: var(--cinza-claro);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#sobre .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#sobre h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--verde-floresta);
+}
+
+#sobre p {
+    font-size: 1.2em;
+    color: var(--cinza-escuro);
+    margin-bottom: 30px;
+}
+
+#sobre .mission, #sobre .offerings, #sobre .vision {
+    margin-bottom: 40px;
+}
+
+#sobre h3 {
+    font-size: 2em;
+    color: var(--azul-urbano);
+    margin-bottom: 15px;
+}
+
+#sobre ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sobre ul li {
+    font-size: 1.1em;
+    color: var(--cinza-escuro);
+    margin-bottom: 10px;
+}
+
+#sobre ul li strong {
+    color: var(--verde-floresta);
+}
+
+/* Seção Oportunidades */
+#oportunidades {
+    background-color: var(--cinza-claro);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#oportunidades .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#oportunidades h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: var(--verde-floresta);
+}
+
+.opportunity {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid var(--cinza-medio);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.opportunity:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.opportunity h3 {
+    font-size: 2em;
+    color: var(--azul-urbano);
+    margin-bottom: 15px;
+}
+
+.opportunity p {
+    font-size: 1.1em;
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+}
+
+/* Seção de Histórias de Sucesso */
+#historias {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#historias .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#historias h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: var(--verde-floresta);
+}
+
+.story {
+    background: #fff;
+    border: 1px solid var(--cinza-medio);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.story:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.story h3 {
+    font-size: 2em;
+    color: var(--azul-urbano);
+    margin-bottom: 15px;
+}
+
+.story p {
+    font-size: 1.1em;
+    color: var(--cinza-texto-principal);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.story ul {
+    list-style-type: disc;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.story ul li {
+    font-size: 1.1em;
+    color: var(--cinza-texto-principal);
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-links a:hover {
+    text-decoration: underline;
+}
